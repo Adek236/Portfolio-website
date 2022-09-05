@@ -1,0 +1,9 @@
+@import "../../styles/Variables.scss";
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 75%;
+  width: 100%;
+}

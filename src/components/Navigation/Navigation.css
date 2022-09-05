@@ -1,0 +1,31 @@
+.navigation {
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.navigation > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem;
+}
+.navigation > nav a {
+  display: flex;
+  align-items: center;
+}
+.navigation > nav div {
+  display: flex;
+}
+.navigation > nav div:nth-child(2) svg {
+  font-size: 3rem;
+}
+.navigation > nav div:nth-child(3) {
+  color: rgb(0, 0, 0);
+}
+.navigation > nav div:nth-child(3) svg:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=Navigation.css.map */
