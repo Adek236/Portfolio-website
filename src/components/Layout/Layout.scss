@@ -13,7 +13,6 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
 
 .container {
@@ -26,6 +25,20 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.font-color-light {
+  color: $mainFontColor;
+  > * a {
+    color: $mainFontColor;
+  }
+}
+
+.font-color-dark {
+  color: $mainFontColorSecondary;
+  > * a {
+    color: $mainFontColorSecondary;
+  }
 }
 
 .fill-container {
@@ -42,7 +55,6 @@ html {
 
 a {
   text-decoration: none;
-  color: $mainFontColor;
 }
 
 ul {

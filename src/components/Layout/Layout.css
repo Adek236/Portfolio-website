@@ -25,6 +25,20 @@ html {
   align-items: center;
 }
 
+.font-color-light {
+  color: rgb(0, 0, 0);
+}
+.font-color-light > * a {
+  color: rgb(0, 0, 0);
+}
+
+.font-color-dark {
+  color: rgb(223, 180, 180);
+}
+.font-color-dark > * a {
+  color: rgb(223, 180, 180);
+}
+
 .fill-container {
   position: absolute;
   top: 0;
@@ -39,7 +53,6 @@ html {
 
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
 }
 
 ul {
