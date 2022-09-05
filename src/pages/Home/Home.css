@@ -1,3 +1,17 @@
 .home {
-  height: 5rem;
+  flex-direction: column;
+  height: 100vh;
+}
+.home__desc {
+  flex-direction: column;
+  padding-bottom: 10rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 90%;
+}
+.home__children {
+  width: 90%;
+}
+.home__children > div {
+  margin-inline: 1rem;
 }/*# sourceMappingURL=Home.css.map */

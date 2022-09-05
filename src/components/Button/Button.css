@@ -1,0 +1,33 @@
+.buttonOuter {
+  position: relative;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 0.1rem;
+  border: 1px solid red;
+}
+.buttonOuter .buttonInner {
+  height: 100%;
+  background-color: gray;
+}
+.buttonOuter .buttonInner:hover {
+  background-color: rgb(255, 255, 255);
+}
+.buttonOuter .buttonInner .buttonTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+.buttonOuter .secondaryBg {
+  background-color: green;
+}
+.buttonOuter .secondaryBg:hover {
+  background-color: blue;
+}
+
+.secondaryBorder {
+  border: 1px solid blue;
+}/*# sourceMappingURL=Button.css.map */
