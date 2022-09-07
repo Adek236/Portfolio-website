@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Button from "./components/Button/Button";
-import CurrentPage from "./components/CurrentPage/CurrentPage";
+import Logo from "./components/CurrentPage/Logo";
 
 //pages
 import Home from "./pages/Home/Home";
@@ -17,18 +17,17 @@ import Contact from "./pages/Contact/Contact";
 function App() {
   return (
     <Layout>
-      <CurrentPage />
       <Header>
+        <Logo />
+        <Button title="Download CV" bgColor="secondary"/>
+        <Button title="Let's Talk"/>
         <Navigation />
       </Header>
       <Main>
-        <Home>
-          <Button title="Download CV" bgColor="secondary"/>
-          <Button title="Let's Talk"/>
-        </Home>
+        <Home/>
+        <Projects />
         <About />
         <Skills />
-        <Projects />
         <Contact />
       </Main>
       <Footer />
