@@ -3,6 +3,7 @@
   justify-content: center;
   flex-direction: column;
   height: 90vh;
+  overflow: hidden;
 }
 .project__slider {
   height: 85%;
@@ -17,11 +18,14 @@
   overflow: hidden;
 }
 .project__menu {
+  display: flex;
   height: 15%;
-  overflow: hidden;
+  width: 100%;
 }
 .project__menu__el {
   height: 100%;
-  width: 10rem;
   border: 1px solid black;
+}
+.project__menu .swiper-button-prev, .project__menu .swiper-button-next {
+  color: black;
 }/*# sourceMappingURL=Projects.css.map */
