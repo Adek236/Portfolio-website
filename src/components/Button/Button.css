@@ -1,33 +1,28 @@
-.buttonOuter {
+.button {
   position: relative;
-  height: 3rem;
-  width: 10rem;
-  border-radius: 0.1rem;
-  border: 1px solid red;
+  min-width: 3rem;
 }
-.buttonOuter .buttonInner {
-  height: 100%;
-  background-color: gray;
-}
-.buttonOuter .buttonInner:hover {
-  background-color: rgb(255, 255, 255);
-}
-.buttonOuter .buttonInner .buttonTitle {
-  height: 100%;
-  display: flex;
+.button__short-title, .button__long-title {
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  background-color: rgba(128, 128, 128, 0.4);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 }
-.buttonOuter .secondaryBg {
-  background-color: green;
+.button__short-title {
+  display: flex;
 }
-.buttonOuter .secondaryBg:hover {
-  background-color: blue;
+@media (min-width: 615px) {
+  .button__short-title {
+    display: none;
+  }
 }
-
-.secondaryBorder {
-  border: 1px solid blue;
+.button__long-title {
+  display: none;
+}
+@media (min-width: 615px) {
+  .button__long-title {
+    display: flex;
+  }
 }/*# sourceMappingURL=Button.css.map */

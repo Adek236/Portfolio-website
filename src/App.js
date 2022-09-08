@@ -14,17 +14,26 @@ import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 
+//assets
+import ChatIcon from "@mui/icons-material/Chat";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
+// import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+
 function App() {
   return (
     <Layout>
       <Header>
         <Logo />
-        <Button title="Download CV" bgColor="secondary"/>
-        <Button title="Let's Talk"/>
+        <Button shortTitle="CV" longTitle="Download CV" link="/">
+          <FileDownloadIcon />
+        </Button>
+        <Button longTitle="Let's Talk" link="/">
+          <ChatIcon />
+        </Button>
         <Navigation />
       </Header>
       <Main>
-        <Home/>
+        <Home />
         <Projects />
         <About />
         <Skills />

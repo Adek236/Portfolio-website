@@ -1,16 +1,8 @@
 .navigation {
   position: fixed;
-  height: 3.5rem;
+  right: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  padding: 1.8rem 0.5rem;
-}
-@media (min-width: 993px) {
-  .navigation {
-    padding: 2.3rem 1rem;
-  }
 }
 .navigation__icons {
   display: flex;
