@@ -11,17 +11,20 @@
     border-radius: 1.5rem;
     background-color: $bgColorThird;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
-}
-&__short-title {
+    @media (min-width: $newsBreakPointSmall) {
+      padding: 0.5rem 1rem;
+    }
+  }
+  &__short-title {
     display: flex;
     @media (min-width: $newsBreakPointSmall) {
-        display: none;
+      display: none;
     }
-}
-&__long-title {
+  }
+  &__long-title {
     display: none;
     @media (min-width: $newsBreakPointSmall) {
-        display: flex;
+      display: flex;
     }
   }
 }

@@ -1,5 +1,34 @@
 @import "../../styles/Variables.scss";
 
 .skills {
-    height: 5rem;
+  height: 90vh;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: gray;
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $newsBreakPointMedium) {
+      flex-direction: row;
+    }
+    &__categories {
+        height: 50%;
+        //   width: 100%;
+        border: 1px solid black;
+      &__el {
+          margin: 0 auto;
+        width: 80%;
+        height: 20%;
+        background-color: lightcyan;
+    }
+}
+&__items {
+        height: 50%;
+
+      &__el {
+      }
+    }
+  }
 }

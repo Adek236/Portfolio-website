@@ -5,10 +5,9 @@ import Navigation from "./components/Navigation/Navigation";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Button from "./components/Button/Button";
-import Logo from "./components/CurrentPage/Logo";
+import Logo from "./components/Logo/Logo";
 
 //pages
-import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
@@ -33,7 +32,6 @@ function App() {
         <Navigation />
       </Header>
       <Main>
-        <Home />
         <Projects />
         <About />
         <Skills />

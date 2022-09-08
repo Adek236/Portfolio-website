@@ -1,3 +1,30 @@
 .skills {
-  height: 5rem;
+  height: 90vh;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: gray;
+}
+.skills__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .skills__wrapper {
+    flex-direction: row;
+  }
+}
+.skills__wrapper__categories {
+  height: 50%;
+  border: 1px solid black;
+}
+.skills__wrapper__categories__el {
+  margin: 0 auto;
+  width: 80%;
+  height: 20%;
+  background-color: lightcyan;
+}
+.skills__wrapper__items {
+  height: 50%;
 }/*# sourceMappingURL=Skills.css.map */
