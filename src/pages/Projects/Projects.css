@@ -18,15 +18,42 @@
 .project__slider__elements .swiper-button-next {
   color: black;
 }
+.project__slider__elements .swiper-button-prev {
+  left: 0;
+}
+@media (min-width: 615px) {
+  .project__slider__elements .swiper-button-prev {
+    left: 10px;
+  }
+}
+.project__slider__elements .swiper-button-next {
+  right: 0;
+}
+@media (min-width: 615px) {
+  .project__slider__elements .swiper-button-next {
+    right: 10px;
+  }
+}
 .project__slider__elements, .project__slider__item {
   height: 100%;
 }
 .project__menu {
-  display: flex;
   height: 15%;
   width: 100%;
+  padding-top: 1rem !important;
+}
+@media (min-width: 615px) {
+  .project__menu {
+    padding-top: 0 !important;
+  }
 }
 .project__menu__item {
-  height: 100%;
+  height: 60% !important;
+  margin-inline: 0.2rem;
   border: 1px solid black;
+}
+@media (min-width: 900px) {
+  .project__menu__item {
+    height: 100% !important;
+  }
 }/*# sourceMappingURL=Projects.css.map */

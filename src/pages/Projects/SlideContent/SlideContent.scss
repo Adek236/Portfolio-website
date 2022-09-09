@@ -1,7 +1,38 @@
+@import "../../../styles/Variables.scss";
+
 .slide-content {
-//   margin: 0 auto;
+  display: flex;
   height: 90%;
   width: 85%;
   border: 1px solid black;
+  flex-direction: column; 
+  @media (min-width: $newsBreakPointMedium) {
+    flex-direction: row; 
+  }
+  &__demo, &__desc {
+    height: 50%;
+    @media (min-width: $newsBreakPointMedium) {
+      height: 100%;
+      width: 50%;
+    }
+  }
+  &__demo {
+    background-color: antiquewhite;
+  }
+  &__desc {
+    flex-direction: column;
+    background-color: rgb(194, 171, 140);
+    &__title {
 
+    }
+    &__language {
+      padding: 0.5rem;
+      > div {
+        padding: 0.3rem;
+        border: 1px solid black;
+        border-radius: 0.6rem;
+        margin-inline: 0.2rem;
+      }
+    }
+  }
 }

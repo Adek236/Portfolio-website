@@ -12,6 +12,7 @@ import SlideContent from "./SlideContent/SlideContent";
 const Projects = () => {
   return (
     <div className="project">
+      <h2>Projects</h2>
       <div className="project__slider">
         <Swiper
           modules={[Navigation]}
@@ -21,27 +22,32 @@ const Projects = () => {
           loop
           className="project__slider__elements"
         >
-          {[1, 2, 3, 4].map((el, index) => {
-            return (
-              <SwiperSlide className="project__slider__elements__item flex-center">
-                <SlideContent index={index} />
-              </SwiperSlide>
-            );
-          })}
+          {Array(4)
+            .fill()
+            .map((el, index) => {
+              return (
+                <SwiperSlide className="project__slider__elements__item flex-center">
+                  <SlideContent key={index} index={index} />
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
       <Swiper
         // modules={[Navigation]}
         // navigation
         speed={800}
-        slidesPerView={3}
+        slidesPerView={8}
         loop
         className="project__menu"
       >
-        <SwiperSlide className="project__menu__item">Avatar1</SwiperSlide>
-        <SwiperSlide className="project__menu__item">Avatar2</SwiperSlide>
-        <SwiperSlide className="project__menu__item">Avatar3</SwiperSlide>
-        <SwiperSlide className="project__menu__item">Avatar4</SwiperSlide>
+        {Array(8)
+          .fill()
+          .map((el, index) => {
+            return (
+              <SwiperSlide key={index} className="project__menu__item">Avatar{index}</SwiperSlide>
+            );
+          })}
       </Swiper>
     </div>
   );
