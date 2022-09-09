@@ -11,21 +11,22 @@
   align-items: center;
   justify-content: space-between;
 }
-.project__slider__left-arrow, .project__slider__right-arrow {
-  border: 1px solid black;
-}
 .project__slider__elements {
   overflow: hidden;
+}
+.project__slider__elements .swiper-button-prev,
+.project__slider__elements .swiper-button-next {
+  color: black;
+}
+.project__slider__elements, .project__slider__item {
+  height: 100%;
 }
 .project__menu {
   display: flex;
   height: 15%;
   width: 100%;
 }
-.project__menu__el {
+.project__menu__item {
   height: 100%;
   border: 1px solid black;
-}
-.project__menu .swiper-button-prev, .project__menu .swiper-button-next {
-  color: black;
 }/*# sourceMappingURL=Projects.css.map */
