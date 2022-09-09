@@ -1,5 +1,35 @@
 @import "../../styles/Variables.scss";
 
 .about {
-    height: 5rem;
+  display: flex;
+  height: 100vh;
+  padding: 2rem;
+  @media (min-width: $newsBreakPointMedium) {
+    padding: 3rem;
+  }
+  &__image,
+  &__wrapper {
+    flex-grow: 1;
+    max-width: 50%;
+  }
+  &__image {
+    display: none;
+    @media (min-width: $newsBreakPointMedium) {
+        display: flex;
+      }
+  }
+  &__wrapper {
+    padding-top: 5rem;
+    @media (min-width: $newsBreakPointMedium) {
+        padding-top: 10rem;
+      }
+    &__desc {
+      > h2 {
+        font-size: 2rem;
+        @media (min-width: $newsBreakPointMedium) {
+            font-size: 4rem;
+          }
+      }
+    }
+  }
 }

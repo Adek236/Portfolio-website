@@ -3,9 +3,22 @@ import "./About.css";
 const About = () => {
   return (
     <section className="about">
-       About
+      <div className="about__image flex-center">foto</div>
+      <div className="about__wrapper">
+        <div className="about__wrapper__desc">
+          <h2>About me</h2>
+          <p>desc</p>
+        </div>
+        <div className="about__wrapper__hobbies">
+          <h3>Interests</h3>
+          <div className="about__wrapper__hobbies__elements">
+            <div>games</div>
+            <div>football</div>
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default About;
