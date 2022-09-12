@@ -48,18 +48,13 @@
 }
 .project__menu {
   height: 15%;
-  width: 85%;
+  width: 80%;
   overflow: hidden;
   padding-top: 1rem !important;
 }
 @media (min-width: 615px) {
   .project__menu {
     padding-top: 0 !important;
-  }
-}
-@media (min-width: 900px) {
-  .project__menu {
-    width: 85%;
   }
 }
 .project__menu__item {

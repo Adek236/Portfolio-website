@@ -2,9 +2,9 @@
 
 .slide-content {
   display: flex;
-  height: 90%;
+  height: 95%;
   // min-height: 100vh;
-  width: 85%;
+  width: 80%;
   flex-direction: column;
   @media (min-width: $newsBreakPointMedium) {
     flex-direction: row;

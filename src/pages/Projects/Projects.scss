@@ -45,16 +45,12 @@
     
   }
   &__menu {
-    // display: flex;
     height: 15%;
-    width: 85%;
+    width: 80%;
     overflow: hidden;
     padding-top: 1rem !important;
     @media (min-width: $newsBreakPointSmall) {
       padding-top: 0 !important;
-    }
-    @media (min-width: $newsBreakPointMedium) {
-      width: 85%;
     }
     &__item {
       height: 60% !important;
