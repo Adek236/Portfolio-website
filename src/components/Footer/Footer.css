@@ -26,22 +26,6 @@
 .footer__nav__copyright {
   text-align: center;
 }
-.footer__nav > nav {
-  display: flex;
-  flex-grow: 1;
-  padding: 0.5rem;
-}
-.footer__nav > nav > ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.footer__nav > nav > ul > li {
-  margin-inline: 0.5rem;
-}
-.footer .credits-btn {
-  cursor: pointer;
-}
 .footer__socials {
   flex-direction: column;
   width: 100%;

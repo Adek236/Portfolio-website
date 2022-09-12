@@ -34,8 +34,6 @@ const Projects = () => {
         </Swiper>
       </div>
       <Swiper
-        // modules={[Navigation]}
-        // navigation
         speed={800}
         slidesPerView={8}
         loop
@@ -45,7 +43,7 @@ const Projects = () => {
           .fill()
           .map((el, index) => {
             return (
-              <SwiperSlide key={index} className="project__menu__item">Avatar{index}</SwiperSlide>
+              <SwiperSlide key={index} className="project__menu__item">{index}</SwiperSlide>
             );
           })}
       </Swiper>

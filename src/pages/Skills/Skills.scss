@@ -1,19 +1,31 @@
 @import "../../styles/Variables.scss";
 
 .skills {
-  height: 80vh;
-  width: 80%;
+  flex-grow: 1;
+  min-height: 25rem;
+  width: 85%;
   margin: 0 auto;
+  flex-direction: column;
   border-radius: 1rem;
   background-color: gray;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
   @media (min-width: $newsBreakPointMedium) {
     height: 50vh;
+    // width: 75%;
+  }
+  > h2 {
+    font-size: 3rem;
+    @media (min-width: $newsBreakPointMedium) {
+      display: none;
+    }
   }
   &__wrapper {
     height: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     @media (min-width: $newsBreakPointMedium) {
+      padding: 2rem;
       flex-direction: row;
     }
     &__categories {
@@ -21,16 +33,17 @@
       flex-direction: column;
       height: 50%;
       padding: 0.5rem 0;
-      border: 1px solid black;
+      // border: 1px solid black;
       @media (min-width: $newsBreakPointMedium) {
         height: 100%;
         width: 50%;
       }
       &__el {
+        font-size: 1.5rem;
         flex-grow: 1;
         margin: 0.3rem auto;
         width: 80%;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         background-color: rgb(155, 180, 180);
       }
     }
@@ -40,15 +53,27 @@
       justify-content: center;
       flex-wrap: wrap;
       height: 50%;
-      padding: 1rem;
-      border: 1px solid black;
+      padding: 2rem 0;
+      // border: 1px solid black;
       @media (min-width: $newsBreakPointMedium) {
+        padding-top: 0;
+        justify-content:flex-start;
+        padding-right: 7rem;
         height: 100%;
         width: 50%;
       }
+      > h2.skills-right {
+        display: none;
+        margin: 0.2rem;
+        width: 100%;
+        font-size: 3rem;
+        @media (min-width: $newsBreakPointMedium) {
+          display: block;
+        }
+      }
       &__el {
         margin: 0.2rem;
-        border-radius: 1rem;
+        border-radius: 0.4rem;
         height: 3rem;
         padding: 0.5rem;
         border: 1px solid rgb(217, 219, 53);

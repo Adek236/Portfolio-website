@@ -3,7 +3,9 @@ import "./About.css";
 const About = () => {
   return (
     <section className="about">
-      <div className="about__image flex-center">foto</div>
+      <div className="about__image">
+        <div className="about__image__box">image</div>
+      </div>
       <div className="about__wrapper">
         <div className="about__wrapper__desc">
           <h2>About me</h2>

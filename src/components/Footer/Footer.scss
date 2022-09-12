@@ -5,7 +5,6 @@
   height: 10rem;
   width: 100%;
   font-size: 0.7rem;
-  // color: $mainFontColor;
   @media (min-width: $newsBreakPointSmall) {
     flex-direction: row;
     padding: 0 10%;
@@ -25,22 +24,7 @@
     &__copyright {
       text-align: center;
     }
-    > nav {
-      display: flex;
-      flex-grow: 1;
-      padding: 0.5rem;
-      > ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        > li {
-          margin-inline: 0.5rem;
-        }
-      }
-    }
-  }
-  .credits-btn {
-    cursor: pointer;
+   
   }
   &__socials {
     flex-direction: column;

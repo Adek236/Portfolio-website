@@ -2,18 +2,19 @@ import "./Skills.css";
 
 const Skills = () => {
   return (
-    <section className="skills">
-      <h2>Skills</h2>
+    <section className="skills flex-center">
+      <h2 className="skills-top">Skills</h2>
       <div className="skills__wrapper">
         <div className="skills__wrapper__categories">
-          <div className="skills__wrapper__categories__el flex-center">a</div>
-          <div className="skills__wrapper__categories__el flex-center">a</div>
-          <div className="skills__wrapper__categories__el flex-center">a</div>
-          <div className="skills__wrapper__categories__el flex-center">a</div>
-          <div className="skills__wrapper__categories__el flex-center">a</div>
+          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
+          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
+          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
+          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
+          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
         </div>
         <div className="skills__wrapper__items">
-          <div className="skills__wrapper__items__el flex-center">bdsdsds</div>
+          <h2 className="skills-right">Skills</h2>
+          <div className="skills__wrapper__items__el flex-center" >bdsdsds</div>
           <div className="skills__wrapper__items__el flex-center">bdsd</div>
           <div className="skills__wrapper__items__el flex-center">bddddddddd</div>
           <div className="skills__wrapper__items__el flex-center">bdsdsd</div>

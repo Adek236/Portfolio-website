@@ -3,10 +3,15 @@
   justify-content: center;
   flex-direction: column;
   height: 90vh;
+  min-height: 44rem;
   overflow: hidden;
 }
+.project > h2 {
+  margin: 0 auto;
+  font-size: 3rem;
+}
 .project__slider {
-  height: 85%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,6 +22,10 @@
 .project__slider__elements .swiper-button-prev,
 .project__slider__elements .swiper-button-next {
   color: black;
+}
+.project__slider__elements .swiper-button-prev::after,
+.project__slider__elements .swiper-button-next::after {
+  font-size: 1.5rem;
 }
 .project__slider__elements .swiper-button-prev {
   left: 0;
@@ -39,7 +48,8 @@
 }
 .project__menu {
   height: 15%;
-  width: 100%;
+  width: 85%;
+  overflow: hidden;
   padding-top: 1rem !important;
 }
 @media (min-width: 615px) {
@@ -47,13 +57,20 @@
     padding-top: 0 !important;
   }
 }
+@media (min-width: 900px) {
+  .project__menu {
+    width: 85%;
+  }
+}
 .project__menu__item {
   height: 60% !important;
   margin-inline: 0.2rem;
-  border: 1px solid black;
+  border-radius: 0.4rem;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgb(172, 141, 100);
 }
 @media (min-width: 900px) {
   .project__menu__item {
-    height: 100% !important;
+    height: 95% !important;
   }
 }/*# sourceMappingURL=Projects.css.map */

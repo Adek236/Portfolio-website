@@ -21,36 +21,6 @@ const Footer = ({ setShowCredits }) => {
     >
       <div className={`footer__nav ${myElementIsVisible ? "activeObs" : ""}`}>
         <div className="footer__nav__copyright">2022 ALL RIGHTS RESERVED.</div>
-        <nav aria-label="Secondary">
-          <ul>
-            <li>
-              <div
-                tabIndex="0"
-                className="credits-btn"
-                // onClick={() => setShowCredits(true)}
-                // onKeyDown={(e) => {
-                //   if (e.key === "Enter") {
-                //     setShowCredits(true);
-                //   }
-                // }}
-              >
-                Credits
-              </div>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
-            <li>
-              <a href="/">Support</a>
-            </li>
-            <li>
-              <a href="/">Cookies</a>
-            </li>
-          </ul>
-        </nav>
       </div>
       <div
         className={`footer__socials flex-center ${
