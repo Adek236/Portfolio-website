@@ -1,3 +1,5 @@
+import { useCycle } from "framer-motion";
+
 //components
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
@@ -6,6 +8,7 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Button from "./components/Button/Button";
 import Logo from "./components/Logo/Logo";
+import Modal from "./components/Modal/Modal"
 
 //pages
 import About from "./pages/About/About";
@@ -19,8 +22,10 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 // import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 function App() {
+  const [isModalOpen, toggleModal] = useCycle(false,true);
   return (
     <Layout>
+      <Modal isModalOpen={isModalOpen}/>
       <Header>
         <Logo />
         <Button shortTitle="CV" longTitle="Download CV" link="/">
@@ -29,7 +34,7 @@ function App() {
         <Button longTitle="Let's Talk" link="/">
           <ChatIcon />
         </Button>
-        <Navigation />
+        <Navigation toggleModal={toggleModal}/>
       </Header>
       <Main>
         <Projects />
