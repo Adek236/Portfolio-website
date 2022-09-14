@@ -4,17 +4,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
 
-const NavBar = ({ showModal, setShowModal, modalRef, navigationRef }) => {
+const NavBar = ({ toggleModal, showModal, setShowModal, modalRef, navigationRef }) => {
   // const toggleShowModal = () => {
   //   setShowModal((prev) => !prev);
   // };
 
   return (
     <nav className="navigation" aria-label="Primary">
-      {/* <div className="navigation__logo">
-        <h3>Adrian Zawadzki</h3>
-        <p>Front End Developer</p>
-      </div> */}
       <div className="navigation__icons">
         <div>
           <DarkModeIcon />
@@ -27,7 +23,7 @@ const NavBar = ({ showModal, setShowModal, modalRef, navigationRef }) => {
           aria-label="Open modal"
           tabIndex="0"
           // ref={navigationRef}
-          // onClick={() => toggleShowModal()}
+          onClick={() => toggleModal()}
           // onKeyDown={(e) => {
           //   if (e.key === "Enter") {
           //     toggleShowModal();
