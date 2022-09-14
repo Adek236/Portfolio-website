@@ -1,28 +1,30 @@
+import { useState } from "react";
 import "./Skills.css";
 
-const Skills = () => {
+const Skills = ({ data }) => {
+  const [idButton, setIdButton] = useState(0);
   return (
     <section className="skills flex-center">
-      <h2 className="skills-top">Skills</h2>
+      <h2 className="skills-top">{data.title}</h2>
       <div className="skills__wrapper">
         <div className="skills__wrapper__categories">
-          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
-          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
-          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
-          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
-          <div tabIndex="1" className="skills__wrapper__categories__el flex-center">a</div>
+          {Array.from(data.buttons).map((el, i) => {
+            return (
+              <div
+                tabIndex="1"
+                className="skills__wrapper__categories__el"
+                onClick={()=> setIdButton(i)}
+              >
+                {el.name}{el.icon}
+              </div>
+            );
+          })}
         </div>
         <div className="skills__wrapper__items">
-          <h2 className="skills-right">Skills</h2>
-          <div className="skills__wrapper__items__el flex-center" >bdsdsds</div>
-          <div className="skills__wrapper__items__el flex-center">bdsd</div>
-          <div className="skills__wrapper__items__el flex-center">bddddddddd</div>
-          <div className="skills__wrapper__items__el flex-center">bdsdsd</div>
-          <div className="skills__wrapper__items__el flex-center">bdsdsd</div>
-          <div className="skills__wrapper__items__el flex-center">bdsdsd</div>
-          <div className="skills__wrapper__items__el flex-center">bdsdsd</div>
-          <div className="skills__wrapper__items__el flex-center">bddddddddd</div>
-          <div className="skills__wrapper__items__el flex-center">bdsdsd</div>
+          <h2 className="skills-right">{data.title}</h2>
+          {Array.from(data.buttons[idButton].items).map((el)=>{
+            return <div className="skills__wrapper__items__el flex-center">{el.name}{el.rating}</div>
+          })}
         </div>
       </div>
     </section>

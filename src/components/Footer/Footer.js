@@ -20,7 +20,7 @@ const Footer = ({ setShowCredits }) => {
     className="footer flex-center"
     >
       <div className={`footer__nav ${myElementIsVisible ? "activeObs" : ""}`}>
-        <div className="footer__nav__copyright">2022 ALL RIGHTS RESERVED.</div>
+        <div className="footer__nav__copyright">©Adrian Zawadzki 2022</div>
       </div>
       <div
         className={`footer__socials flex-center ${

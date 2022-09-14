@@ -1,6 +1,5 @@
 import { useState } from "react";
 import data from "../src/database/database";
-
 import { useCycle } from "framer-motion";
 
 //components
@@ -26,7 +25,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 function App() {
   const [isModalOpen, toggleModal] = useCycle(false,true);
   // eslint-disable-next-line
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("pl");
   return (
     <Layout>
       <Modal isModalOpen={isModalOpen}/>
@@ -41,11 +40,10 @@ function App() {
         <Navigation toggleModal={toggleModal}/>
       </Header>
       <Main>
-        {/* {console.log(data[lang].projects.title)} */}
         <Projects data={data[lang].projects}/>
         <About data={data[lang].about}/>
-        <Skills />
-        <Contact />
+        <Skills data={data[lang].skills}/>
+        <Contact data={data[lang].contact}/>
       </Main>
       <Footer />
     </Layout>

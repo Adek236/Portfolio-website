@@ -52,15 +52,16 @@
   }
 }
 .skills__wrapper__categories__el {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 1.5rem;
   flex-grow: 1;
   margin: 0.3rem auto;
   width: 80%;
+  padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   background-color: rgb(155, 180, 180);
-}
-.skills__wrapper__categories__el:focus {
-  padding-top: 0.4rem;
 }
 .skills__wrapper__items {
   display: flex;

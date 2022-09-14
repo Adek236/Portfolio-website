@@ -5,10 +5,10 @@
   height: 5rem;
   width: 100%;
   font-size: 0.7rem;
-  @media (min-width: $newsBreakPointSmall) {
-    flex-direction: row;
-    padding: 0 10%;
-  }
+  // @media (min-width: $newsBreakPointSmall) {
+  //   flex-direction: row;
+  //   padding: 0 10%;
+  // }
   &__nav {
     display: flex;
     flex-direction: column;
@@ -23,6 +23,7 @@
     }
     &__copyright {
       text-align: center;
+      text-transform: uppercase;
     }
    
   }
