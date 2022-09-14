@@ -1,3 +1,6 @@
+import { useState } from "react";
+import data from "../src/database/database";
+
 //components
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
@@ -16,24 +19,26 @@ import Contact from "./pages/Contact/Contact";
 //assets
 import ChatIcon from "@mui/icons-material/Chat";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-// import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 function App() {
+  // eslint-disable-next-line
+  const [lang, setLang] = useState("en");
   return (
     <Layout>
       <Header>
-        <Logo />
-        <Button shortTitle="CV" longTitle="Download CV" link="/">
+        <Logo data={data[lang].logo} />
+        <Button data={data[lang].buttons[0]}>
           <FileDownloadIcon />
         </Button>
-        <Button longTitle="Let's Talk" link="/">
+        <Button data={data[lang].buttons[1]}>
           <ChatIcon />
         </Button>
         <Navigation />
       </Header>
       <Main>
-        <Projects />
-        <About />
+        {/* {console.log(data[lang].projects.title)} */}
+        <Projects data={data[lang].projects}/>
+        <About data={data[lang].about}/>
         <Skills />
         <Contact />
       </Main>

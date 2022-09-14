@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 
 import SlideContent from "./SlideContent/SlideContent";
 
-const Projects = () => {
+const Projects = ({ data }) => {
   return (
     <div className="project">
-      <h2>Projects</h2>
+      <h2>{data.title}</h2>
       <div className="project__slider">
         <Swiper
           modules={[Navigation]}
@@ -22,30 +22,26 @@ const Projects = () => {
           loop
           className="project__slider__elements"
         >
-          {Array(4)
-            .fill()
-            .map((el, index) => {
-              return (
-                <SwiperSlide className="project__slider__elements__item flex-center">
-                  <SlideContent key={index} index={index} />
-                </SwiperSlide>
-              );
-            })}
-        </Swiper>
-      </div>
-      <Swiper
-        speed={800}
-        slidesPerView={8}
-        loop
-        className="project__menu"
-      >
-        {Array(8)
-          .fill()
-          .map((el, index) => {
+          {Array.from(data.sliders).map((data, index) => {
             return (
-              <SwiperSlide key={index} className="project__menu__item">{index}</SwiperSlide>
+              <SwiperSlide
+                key={index}
+                className="project__slider__elements__item flex-center"
+              >
+                <SlideContent data={data} />
+              </SwiperSlide>
             );
           })}
+        </Swiper>
+      </div>
+      <Swiper speed={800} slidesPerView={8} loop className="project__menu">
+        {Array.from(data.menu).map((el, index) => {
+          return (
+            <SwiperSlide key={index} className="project__menu__item">
+              {el.img}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

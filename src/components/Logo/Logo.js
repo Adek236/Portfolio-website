@@ -1,10 +1,10 @@
 import "./Logo.css";
 
-const Logo = () => {
+const Logo = ({data}) => {
   return (
     <div className="logo">
-      <h3>Adrian Zawadzki</h3>
-      <p>Front End Developer</p>
+      <h3>{data.title}</h3>
+      <p>{data.p}</p>
     </div>
   );
 };

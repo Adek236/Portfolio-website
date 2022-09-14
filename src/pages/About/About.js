@@ -1,21 +1,22 @@
 import "./About.css";
 
-const About = () => {
+const About = ({data}) => {
   return (
     <section className="about">
       <div className="about__image">
-        <div className="about__image__box">image</div>
+        <div className="about__image__box">{data.img}</div>
       </div>
       <div className="about__wrapper">
         <div className="about__wrapper__desc">
-          <h2>About me</h2>
-          <p>desc</p>
+          <h2>{data.mainTitle}</h2>
+          <p>{data.desc}</p>
         </div>
         <div className="about__wrapper__hobbies">
-          <h3>Interests</h3>
+          <h3>{data.title}</h3>
           <div className="about__wrapper__hobbies__elements">
-            <div>games</div>
-            <div>football</div>
+          {Array.from(data.interests).map((el, i) => {
+            return <div key={i}>{el.name}{el.icon}</div>;
+          })}
           </div>
         </div>
       </div>

@@ -66,6 +66,13 @@ ul {
   justify-content: center;
 }
 
+.flex-center-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 h2 {
   font-family: "Luckiest Guy", "Open Sans", "Arial", "Helvetica", cursive;
   letter-spacing: 0.1rem;
