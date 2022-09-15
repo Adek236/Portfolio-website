@@ -22,6 +22,7 @@ const variants = {
 };
 
 const Modal = ({ isModalOpen }) => {
+  
   return (
     <motion.div
       className="modal"

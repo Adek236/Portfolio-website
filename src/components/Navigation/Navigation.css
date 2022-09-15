@@ -2,26 +2,37 @@
   position: fixed;
   right: 0.5rem;
   top: 0.6rem;
-  display: flex;
 }
 .navigation__icons {
+  height: 2.5rem;
+  width: 6rem;
   display: flex;
+  justify-content: center;
   padding: 0.5rem;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background-color: rgba(128, 128, 128, 0.4);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 }
-.navigation__icons--open {
-  padding-bottom: 5rem;
-  transition: all 2s;
-}
 .navigation__icons > div {
   display: flex;
+  align-items: center;
+  height: 1.5rem;
   margin-inline: 0.2rem;
 }
 .navigation__icons > div:hover {
   cursor: pointer;
   scale: 1.05;
+}
+.navigation__menu {
+  position: absolute;
+  width: 100%;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navigation__menu--hidden {
+  display: none;
 }/*# sourceMappingURL=Navigation.css.map */

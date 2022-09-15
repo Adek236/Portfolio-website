@@ -2,8 +2,8 @@ import React from "react";
 import "./Button.css";
 import { motion } from "framer-motion";
 
-const Button = ({ data, children, }) => {
-  const {shortTitle, longTitle, link} = data;
+const Button = ({ data }) => {
+  const {shortTitle, longTitle, link, icon} = data;
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
@@ -13,7 +13,7 @@ const Button = ({ data, children, }) => {
       
       <div className="button__short-title">
         {shortTitle ? shortTitle : ""}
-        {children}
+        {data.icon}
       </div>
       <div className="button__long-title">{longTitle}</div>
       <a

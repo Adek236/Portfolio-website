@@ -1,4 +1,7 @@
+// icons
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import ChatIcon from "@mui/icons-material/Chat";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 const data = {
   en: {
@@ -11,11 +14,13 @@ const data = {
         shortTitle: "CV",
         longTitle: "Download CV",
         link: "/",
+        icon: <FileDownloadIcon/>
       },
       {
         shortTitle: "",
         longTitle: "Let's Talk",
         link: "/",
+        icon: <ChatIcon/>
       },
     ],
     projects: {

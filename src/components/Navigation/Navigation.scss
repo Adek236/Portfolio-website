@@ -4,22 +4,22 @@
   position: fixed;
   right: 0.5rem;
   top: 0.6rem;
-  display: flex;
-  // align-items: flex-start;
-  // justify-content: flex-start;
+  // display: flex;
   &__icons {
+    height: 2.5rem;
+    width: 6rem;
     display: flex;
+    // align-items: center;
+    justify-content: center;
     padding: 0.5rem;
-    border-radius: 1.5rem;
+    border-radius: 1.2rem;
     backdrop-filter: blur(10px);
     background-color: $bgColorThird;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
-    &--open {
-      padding-bottom: 5rem;
-      transition: all 2s;
-    }
     > div {
       display: flex;
+      align-items: center;
+      height: 1.5rem;
       margin-inline: 0.2rem;
       &:hover {
         cursor: pointer;
@@ -27,4 +27,42 @@
       }
     }
   }
+  &__menu {
+    position: absolute;
+    width: 100%;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--hidden {
+      display: none;
+    }
+  }
 }
+// .navigation {
+//   position: fixed;
+//   right: 0.5rem;
+//   top: 0.6rem;
+//   display: flex;
+//   &__icons {
+//     height: 2.5rem;
+//     width: 6rem;
+//     display: flex;
+//     justify-content: flex-end;
+//     padding: 0.5rem;
+//     border-radius: 1.2rem;
+//     backdrop-filter: blur(10px);
+//     background-color: $bgColorThird;
+//     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+//     > div {
+//       display: flex;
+//       align-items: flex-start;
+//       height: 1.5rem;
+//       margin-inline: 0.2rem;
+//       &:hover {
+//         cursor: pointer;
+//         scale: 1.05;
+//       }
+//     }
+//   }
+// }
