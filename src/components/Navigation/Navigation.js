@@ -11,7 +11,7 @@ const NavBar = ({ toggleModal, showModal, setShowModal, modalRef, navigationRef 
 
   return (
     <nav className="navigation" aria-label="Primary">
-      <div className="navigation__icons">
+      <div className="navigation__icons navigation__icons--open">
         <div>
           <DarkModeIcon />
         </div>

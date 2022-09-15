@@ -1,21 +1,28 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./Projects.css";
 // import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation,
+  //  Controller  
+  } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import SlideContent from "./SlideContent/SlideContent";
 
 const Projects = ({ data }) => {
+  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // const [controlledSwiper, setControlledSwiper] = useState(null);
   return (
     <div className="project">
       <h2>{data.title}</h2>
       <div className="project__slider">
         <Swiper
-          modules={[Navigation]}
+          modules={[
+            Navigation, 
+            // Controller
+          ]}
+          // controller={{ control: controlledSwiper }}
           navigation
           speed={800}
           slidesPerView={1}
@@ -34,10 +41,15 @@ const Projects = ({ data }) => {
           })}
         </Swiper>
       </div>
-      <Swiper speed={800} slidesPerView={8} loop className="project__menu">
+      <Swiper 
+      // modules={[Controller]} 
+      // onSwiper={setControlledSwiper} 
+      speed={800} 
+      slidesPerView={8} 
+      loop className="project__menu">
         {Array.from(data.menu).map((el, index) => {
           return (
-            <SwiperSlide key={index} className="project__menu__item">
+            <SwiperSlide key={`slide-${index}`} className="project__menu__item">
               {el.img}
             </SwiperSlide>
           );

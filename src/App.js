@@ -25,7 +25,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 function App() {
   const [isModalOpen, toggleModal] = useCycle(false,true);
   // eslint-disable-next-line
-  const [lang, setLang] = useState("pl");
+  const [lang, setLang] = useState("en");
   return (
     <Layout>
       <Modal isModalOpen={isModalOpen}/>

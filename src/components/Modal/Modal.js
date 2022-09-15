@@ -5,16 +5,18 @@ import { motion } from "framer-motion";
 const variants = {
   open: {
     // opacity: 0,
-    clipPath: `circle(1000px at 140px 500px)`,
+    height: '25rem',
+    // clipPath: `circle(150% at 150% 50%)`,
     transition: {
         duration: 0.4,
       },
   },
   closed: {
     // opacity: 1,
-    clipPath: `circle(30px at 440px 40px)`,
+    // clipPath: `circle(5% at 150% 50%)`,
+    height: '10rem',
     transition: {
-      duration: 3,
+      duration: 0.4,
     },
   },
 };
@@ -24,7 +26,7 @@ const Modal = ({ isModalOpen }) => {
     <motion.div
       className="modal"
       variants={variants}
-      initial="open"
+      initial="closed"
       animate={isModalOpen ? "open": "closed"}
     >
       Modal
