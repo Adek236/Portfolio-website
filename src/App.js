@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "../src/database/database";
-// import { useCycle } from "framer-motion";
+import { useCycle } from "framer-motion";
 
 //components
 import Layout from "./components/Layout/Layout";
@@ -21,7 +21,7 @@ import Contact from "./pages/Contact/Contact";
 function App() {
   // const [isModalOpen, toggleModal] = useCycle(false,true);
   // eslint-disable-next-line
-  const [lang, setLang] = useState("en");
+  const [lang, toggleLang] = useCycle("en","pl");
   return (
     <Layout>
       {/* <Modal isModalOpen={isModalOpen}/> */}
@@ -29,7 +29,7 @@ function App() {
         <Logo data={data[lang].logo} />
         <Button data={data[lang].buttons[0]} />
         <Button data={data[lang].buttons[1]} />
-        <Navigation data={data[lang].navigation} />
+        <Navigation data={data[lang].navigation} lang={lang} toggleLang={toggleLang} />
       </Header>
       <Main>
         <Projects data={data[lang].projects}/>

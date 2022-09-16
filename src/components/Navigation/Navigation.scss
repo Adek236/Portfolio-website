@@ -16,6 +16,35 @@
     backdrop-filter: blur(10px);
     background-color: $bgColorThird;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    &__lang {
+      > div,
+      > svg {
+        transition: opacity 0.3s;
+      }
+      > div {
+        position: absolute;
+        opacity: 0;
+        width: 19px;
+        @media (min-width: $newsBreakPointSmall) {
+          width: 23px;
+        }
+      }
+      > svg {
+        opacity: 1;
+      }
+      &:hover {
+        > svg,
+        > div {
+          transition: opacity 0.3s;
+        }
+        > svg {
+          opacity: 0;
+        }
+        > div {
+          opacity: 1;
+        }
+      }
+    }
     > div {
       display: flex;
       align-items: center;

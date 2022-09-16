@@ -38,7 +38,7 @@ const menuVariants = {
   },
 };
 
-const NavBar = ({ data }) => {
+const NavBar = ({ data, toggleLang, lang }) => {
   const [isModalOpen, toggleModal] = useCycle(false, true);
   return (
     <nav className="navigation" aria-label="Primary">
@@ -51,8 +51,9 @@ const NavBar = ({ data }) => {
         <div>
           <DarkModeIcon />
         </div>
-        <div>
+        <div className="navigation__icons__lang" onClick={() => toggleLang()}>
           <LanguageIcon />
+          <div className="flex-center">{lang === "en" ? "PL": "EN"}</div>
         </div>
         <div
           role="button"

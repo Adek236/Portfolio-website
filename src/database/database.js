@@ -256,16 +256,39 @@ const data = {
       title: "Adrian Zawadzki",
       p: "Front End Developer",
     },
+    navigation: {
+      menu: [
+        {
+          name: "Projekty",
+          link: "#projects",
+        },
+        {
+          name: "O mnie",
+          link: "#about",
+        },
+        {
+          name: "Umiejętności",
+          link: "#skills",
+        },
+        {
+          name: "Kontakt",
+          link: "#contact",
+        },
+      ],
+      lang: [{ name: "pl" }, { name: "en" }],
+    },
     buttons: [
       {
         shortTitle: "CV",
         longTitle: "Pobierz CV",
         link: "/",
+        icon: <FileDownloadIcon />,
       },
       {
         shortTitle: "",
         longTitle: "Kontakt",
         link: "/",
+        icon: <ChatIcon />,
       },
     ],
     projects: {
