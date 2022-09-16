@@ -5,7 +5,7 @@ import {faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = ({ data }) => {
   return (
-    <section className="contact flex-center-col">
+    <section id="contact" className="contact flex-center-col">
       <div className="contact__desc flex-center-col">
         <p>{data.prevTitle}</p>
         <h2>{data.title}</h2>

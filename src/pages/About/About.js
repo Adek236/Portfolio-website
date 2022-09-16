@@ -2,7 +2,7 @@ import "./About.css";
 
 const About = ({data}) => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about__image">
         <div className="about__image__box">{data.img}</div>
       </div>

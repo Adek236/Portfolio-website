@@ -29,7 +29,7 @@ function App() {
         <Logo data={data[lang].logo} />
         <Button data={data[lang].buttons[0]} />
         <Button data={data[lang].buttons[1]} />
-        <Navigation/>
+        <Navigation data={data[lang].navigation} />
       </Header>
       <Main>
         <Projects data={data[lang].projects}/>

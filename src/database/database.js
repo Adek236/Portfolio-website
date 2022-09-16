@@ -1,5 +1,5 @@
 // icons
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import ChatIcon from "@mui/icons-material/Chat";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
@@ -9,18 +9,39 @@ const data = {
       title: "Adrian Zawadzki",
       p: "Front End Developer",
     },
+    navigation: {
+      menu: [
+        {
+          name: "Projects",
+          link: "#projects",
+        },
+        {
+          name: "About Me",
+          link: "#about",
+        },
+        {
+          name: "Skills",
+          link: "#skills",
+        },
+        {
+          name: "Contact",
+          link: "#contact",
+        },
+      ],
+      lang: [{ name: "pl" }, { name: "en" }],
+    },
     buttons: [
       {
         shortTitle: "CV",
         longTitle: "Download CV",
         link: "/",
-        icon: <FileDownloadIcon/>
+        icon: <FileDownloadIcon />,
       },
       {
         shortTitle: "",
         longTitle: "Let's Talk",
         link: "/",
-        icon: <ChatIcon/>
+        icon: <ChatIcon />,
       },
     ],
     projects: {
@@ -30,21 +51,21 @@ const data = {
           id: 0,
           img: "/link",
           title: "Title-0",
-          types: ["JavaScript", "Css",],
+          types: ["JavaScript", "Css"],
           desc: "Desc a",
         },
         {
           id: 1,
           img: "/link",
           title: "Title-1",
-          types: ["React", "Scss","JS"],
+          types: ["React", "Scss", "JS"],
           desc: "Desc b",
         },
         {
           id: 2,
           img: "/link",
           title: "Title-2",
-          types: ["React", "Scss","Socket.io"],
+          types: ["React", "Scss", "Socket.io"],
           desc: "Desc c",
         },
         {
@@ -55,24 +76,24 @@ const data = {
           desc: "Desc d",
         },
       ],
-      menu : [
+      menu: [
         {
           id: 0,
-          img: "/link0"
+          img: "/link0",
         },
         {
           id: 1,
-          img: "/link1"
+          img: "/link1",
         },
         {
           id: 2,
-          img: "/link2"
+          img: "/link2",
         },
         {
           id: 3,
-          img: "/link3"
-        }
-      ]
+          img: "/link3",
+        },
+      ],
     },
     about: {
       img: "/image",
@@ -82,13 +103,13 @@ const data = {
       interests: [
         {
           name: "Games",
-          icon: <SportsEsportsIcon />
+          icon: <SportsEsportsIcon />,
         },
         {
           name: "Football",
-          icon: <SportsEsportsIcon />
-        }
-      ]
+          icon: <SportsEsportsIcon />,
+        },
+      ],
     },
     skills: {
       title: "Skills",
@@ -99,25 +120,25 @@ const data = {
           items: [
             {
               name: "React",
-              rating: 2
+              rating: 2,
             },
             {
               name: "Node.js",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Express",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Socket.io",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Firebase",
-              rating: 0.5
+              rating: 0.5,
             },
-          ]
+          ],
         },
         {
           name: "Languages",
@@ -125,25 +146,25 @@ const data = {
           items: [
             {
               name: "JavaScript",
-              rating: 4
+              rating: 4,
             },
             {
               name: "HTML(5)",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "Css(3)",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "SQL",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Bash",
-              rating: 1
+              rating: 1,
             },
-          ]
+          ],
         },
         {
           name: "Third-party apis",
@@ -151,17 +172,17 @@ const data = {
           items: [
             {
               name: "MongoDB",
-              rating: 0.5
+              rating: 0.5,
             },
             {
               name: "Firebase",
-              rating: 0.5
+              rating: 0.5,
             },
             {
               name: "Cloudinary",
-              rating: 0.5
-            }
-          ]
+              rating: 0.5,
+            },
+          ],
         },
         {
           name: "Tools",
@@ -169,33 +190,33 @@ const data = {
           items: [
             {
               name: "VS Code",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "GIMP",
-              rating: 1.5
+              rating: 1.5,
             },
             {
               name: "Discord",
-              rating: 4
+              rating: 4,
             },
             {
               name: "Chrome Dev Tools",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "Windows",
-              rating: 5
+              rating: 5,
             },
             {
               name: "Linux",
-              rating: 1.5
+              rating: 1.5,
             },
             {
               name: "Piskelepp",
-              rating: 3
+              rating: 3,
             },
-          ]
+          ],
         },
         {
           name: "Project management",
@@ -203,31 +224,31 @@ const data = {
           items: [
             {
               name: "GitHub",
-              rating: 2
+              rating: 2,
             },
             {
               name: "Heroku",
-              rating: 2
+              rating: 2,
             },
             {
               name: "Replit",
-              rating: 3
+              rating: 3,
             },
             {
               name: "Codepen",
-              rating: 3
+              rating: 3,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
     contact: {
       prevTitle: "Get in Touch",
       title: "Contact me",
       email: "dasdas@dsds.pl",
       messenger: "@adrianzawa",
-      p: "Send a message"
-    }
+      p: "Send a message",
+    },
   },
 
   pl: {
@@ -254,21 +275,21 @@ const data = {
           id: 0,
           img: "/link",
           title: "Title-0",
-          types: ["JavaScript", "Css",],
+          types: ["JavaScript", "Css"],
           desc: "Desc a",
         },
         {
           id: 1,
           img: "/link",
           title: "Title-1",
-          types: ["React", "Scss","JS"],
+          types: ["React", "Scss", "JS"],
           desc: "Desc b",
         },
         {
           id: 2,
           img: "/link",
           title: "Title-2",
-          types: ["React", "Scss","Socket.io"],
+          types: ["React", "Scss", "Socket.io"],
           desc: "Desc c",
         },
         {
@@ -279,24 +300,24 @@ const data = {
           desc: "Desc d",
         },
       ],
-      menu : [
+      menu: [
         {
           id: 0,
-          img: "/link0"
+          img: "/link0",
         },
         {
           id: 1,
-          img: "/link1"
+          img: "/link1",
         },
         {
           id: 2,
-          img: "/link2"
+          img: "/link2",
         },
         {
           id: 3,
-          img: "/link3"
-        }
-      ]
+          img: "/link3",
+        },
+      ],
     },
     about: {
       img: "/image",
@@ -306,13 +327,13 @@ const data = {
       interests: [
         {
           name: "Gry komputerowe",
-          icon: <SportsEsportsIcon />
+          icon: <SportsEsportsIcon />,
         },
         {
           name: "Piłka nożna",
-          icon: <SportsEsportsIcon />
-        }
-      ]
+          icon: <SportsEsportsIcon />,
+        },
+      ],
     },
     skills: {
       title: "Umiejętności",
@@ -323,25 +344,25 @@ const data = {
           items: [
             {
               name: "React",
-              rating: 2
+              rating: 2,
             },
             {
               name: "Node.js",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Express",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Socket.io",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Firebase",
-              rating: 0.5
+              rating: 0.5,
             },
-          ]
+          ],
         },
         {
           name: "Języki programowania",
@@ -349,25 +370,25 @@ const data = {
           items: [
             {
               name: "JavaScript",
-              rating: 4
+              rating: 4,
             },
             {
               name: "HTML(5)",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "Css(3)",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "SQL",
-              rating: 1
+              rating: 1,
             },
             {
               name: "Bash",
-              rating: 1
+              rating: 1,
             },
-          ]
+          ],
         },
         {
           name: "API innych firm",
@@ -375,17 +396,17 @@ const data = {
           items: [
             {
               name: "MongoDB",
-              rating: 0.5
+              rating: 0.5,
             },
             {
               name: "Firebase",
-              rating: 0.5
+              rating: 0.5,
             },
             {
               name: "Cloudinary",
-              rating: 0.5
-            }
-          ]
+              rating: 0.5,
+            },
+          ],
         },
         {
           name: "Narzędzia",
@@ -393,33 +414,33 @@ const data = {
           items: [
             {
               name: "VS Code",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "GIMP",
-              rating: 1.5
+              rating: 1.5,
             },
             {
               name: "Discord",
-              rating: 4
+              rating: 4,
             },
             {
               name: "Chrome Dev Tools",
-              rating: 2.5
+              rating: 2.5,
             },
             {
               name: "Windows",
-              rating: 5
+              rating: 5,
             },
             {
               name: "Linux",
-              rating: 1.5
+              rating: 1.5,
             },
             {
               name: "Piskelepp",
-              rating: 3
+              rating: 3,
             },
-          ]
+          ],
         },
         {
           name: "Zarządzanie projektami",
@@ -427,31 +448,31 @@ const data = {
           items: [
             {
               name: "GitHub",
-              rating: 2
+              rating: 2,
             },
             {
               name: "Heroku",
-              rating: 2
+              rating: 2,
             },
             {
               name: "Replit",
-              rating: 3
+              rating: 3,
             },
             {
               name: "Codepen",
-              rating: 3
+              rating: 3,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
     contact: {
       prevTitle: "Skontaktuj się ze mną",
       title: "Kontakt",
       email: "dasdas@dsds.pl",
       messenger: "@adrianzawa",
-      p: "Wyślij wiadomość"
-    }
+      p: "Wyślij wiadomość",
+    },
   },
 };
 

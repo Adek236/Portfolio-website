@@ -4,7 +4,7 @@ import "./Skills.css";
 const Skills = ({ data }) => {
   const [idButton, setIdButton] = useState(0);
   return (
-    <section className="skills flex-center">
+    <section id="skills" className="skills flex-center">
       <h2 className="skills-top">{data.title}</h2>
       <div className="skills__wrapper">
         <div className="skills__wrapper__categories">

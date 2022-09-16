@@ -14,7 +14,7 @@ const Projects = ({ data }) => {
   // const [thumbsSwiper, setThumbsSwiper] = useState(null);
   // const [controlledSwiper, setControlledSwiper] = useState(null);
   return (
-    <div className="project">
+    <div id="projects" className="project">
       <h2>{data.title}</h2>
       <div className="project__slider">
         <Swiper
