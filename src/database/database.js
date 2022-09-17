@@ -3,6 +3,9 @@ import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import ChatIcon from "@mui/icons-material/Chat";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
+// images
+import project3 from "../assets/images/project1c_1000.png"
+
 const data = {
   en: {
     logo: {
@@ -49,10 +52,10 @@ const data = {
       sliders: [
         {
           id: 0,
-          img: "/link",
-          title: "Title-0",
+          img: project3,
+          title: "Website react",
           types: ["JavaScript", "Css"],
-          desc: "Desc a",
+          desc: "ddsddddd",
         },
         {
           id: 1,

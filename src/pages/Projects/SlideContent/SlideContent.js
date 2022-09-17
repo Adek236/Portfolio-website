@@ -4,7 +4,9 @@ const SlideContent = ({ data }) => {
   return (
     <div className="slide-content">
       <div className="slide-content__demo flex-center">
-        <div className="slide-content__demo__el">{data.img}</div>
+        <div className="slide-content__demo__el" style={{backgroundImage: `url(${data.img})`}}>
+          {/* {data.img} */}
+          </div>
       </div>
       <div className="slide-content__desc">
         <h2 className="slide-content__desc__title">{data.title}</h2>
