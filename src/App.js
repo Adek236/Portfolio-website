@@ -22,14 +22,16 @@ function App() {
   // const [isModalOpen, toggleModal] = useCycle(false,true);
   // eslint-disable-next-line
   const [lang, toggleLang] = useCycle("en","pl");
+  const [isDarkMode, toggleDarkMode] = useCycle(false,true);
+
   return (
-    <Layout>
+    <Layout isDarkMode={isDarkMode}>
       {/* <Modal isModalOpen={isModalOpen}/> */}
       <Header>
         <Logo data={data[lang].logo} />
         <Button data={data[lang].buttons[0]} />
         <Button data={data[lang].buttons[1]} />
-        <Navigation data={data[lang].navigation} lang={lang} toggleLang={toggleLang} />
+        <Navigation data={data[lang].navigation} lang={lang} toggleLang={toggleLang} toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
       </Header>
       <Main>
         <Projects data={data[lang].projects}/>

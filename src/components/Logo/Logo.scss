@@ -1,5 +1,9 @@
+@import "../../styles/Variables.scss";
+
 .logo {
   display: flex;
   flex-direction: column;
-
+  > p {
+    color: $bgColorThird;
+  }
 }

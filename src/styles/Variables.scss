@@ -1,10 +1,12 @@
 // Colors
-$bgColorPriority: rgb(235, 240, 243);
+// $bgColorPriority: rgb(235, 240, 243);
+$bgColorPriority: rgb(255, 255, 255);
+$bgColorPriorityDark: rgb(0, 0, 0);
 $bgColorSecondary: rgb(255, 255, 255);
-$bgColorThird: rgb(128, 128, 128, 0.4);
+$bgColorThird: rgb(106, 89, 255, 1);
 $bgColorSecondaryTransparent: rgb(235, 240, 243, 0.8);
-$mainFontColor: rgb(0, 0, 0);
-$mainFontColorSecondary: rgb(223, 180, 180);
+$mainFontColor: rgb(42, 45, 63);
+$mainFontColorSecondary: rgb(255, 255, 255);
 $mainFontColorThird: rgba(0, 0, 0, 0.7);
 
 // Fonts

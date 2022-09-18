@@ -2,7 +2,7 @@ import { motion, useCycle } from "framer-motion";
 import { useState } from "react";
 import "./Navigation.css";
 import MenuIcon from "@mui/icons-material/Menu";
-// import LightModeIcon from "@mui/icons-material/LightMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuItem from "./MenuItem/MenuItem";
@@ -38,7 +38,7 @@ const menuVariants = {
   },
 };
 
-const NavBar = ({ data, toggleLang, lang }) => {
+const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
   const [isModalOpen, toggleModal] = useCycle(false, true);
   return (
     <nav className="navigation" aria-label="Primary">
@@ -48,12 +48,12 @@ const NavBar = ({ data, toggleLang, lang }) => {
         animate={isModalOpen ? "open" : "closed"}
         className="navigation__icons"
       >
-        <div>
-          <DarkModeIcon />
+        <div onClick={() => toggleDarkMode()}>
+          {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
         </div>
         <div className="navigation__icons__lang" onClick={() => toggleLang()}>
           <LanguageIcon />
-          <div className="flex-center">{lang === "en" ? "PL": "EN"}</div>
+          <div className="flex-center">{lang === "en" ? "PL" : "EN"}</div>
         </div>
         <div
           role="button"

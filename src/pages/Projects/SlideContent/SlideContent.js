@@ -1,12 +1,16 @@
 import "./SlideContent.css";
+import Button from "../../../components/Button/Button";
 
 const SlideContent = ({ data }) => {
   return (
     <div className="slide-content">
       <div className="slide-content__demo flex-center">
-        <div className="slide-content__demo__el" style={{backgroundImage: `url(${data.img})`}}>
+        <div
+          className="slide-content__demo__el"
+          style={{ backgroundImage: `url(${data.img})` }}
+        >
           {/* {data.img} */}
-          </div>
+        </div>
       </div>
       <div className="slide-content__desc">
         <h2 className="slide-content__desc__title">{data.title}</h2>
@@ -15,7 +19,23 @@ const SlideContent = ({ data }) => {
             return <div key={i}>{el}</div>;
           })}
         </div>
-        <p className="slide-content__desc__language">{data.desc}</p>
+        <p className="slide-content__desc__p">{data.desc}</p>
+        <div className="slide-content__desc__btns">
+          <Button
+            data={{
+              shortTitle: data.buttons[0].shortTitle,
+              longTitle: data.buttons[0].longTitle,
+              link: data.liveLink,
+            }}
+          />
+          <Button
+            data={{
+              shortTitle: data.buttons[1].shortTitle,
+              longTitle: data.buttons[1].longTitle,
+              link: data.gitHubLink,
+            }}
+          />
+        </div>
       </div>
     </div>
   );

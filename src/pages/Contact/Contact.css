@@ -6,6 +6,9 @@
 .contact__desc {
   padding-bottom: 2rem;
 }
+.contact__desc > p {
+  color: rgb(106, 89, 255);
+}
 @media (min-width: 615px) {
   .contact__btns {
     flex-direction: row;
@@ -15,7 +18,16 @@
   margin: 1rem;
   padding: 2rem;
   border-radius: 0.7rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(106, 89, 255);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.contact__btns__box > a {
+  padding-top: 0.2rem;
+  color: rgb(212, 211, 211);
+}
+.contact__btns__box > a:hover {
+  color: rgb(255, 255, 255);
 }
 .contact__btns__box > svg {
   font-size: 1.2rem;

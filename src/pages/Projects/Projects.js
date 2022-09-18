@@ -13,6 +13,7 @@ import SlideContent from "./SlideContent/SlideContent";
 const Projects = ({ data }) => {
   // const [thumbsSwiper, setThumbsSwiper] = useState(null);
   // const [controlledSwiper, setControlledSwiper] = useState(null);
+  const buttons = data.buttons;
   return (
     <div id="projects" className="project">
       <h2>{data.title}</h2>
@@ -30,6 +31,7 @@ const Projects = ({ data }) => {
           className="project__slider__elements"
         >
           {Array.from(data.sliders).map((data, index) => {
+            data.buttons = buttons;
             return (
               <SwiperSlide
                 key={index}
@@ -44,13 +46,14 @@ const Projects = ({ data }) => {
       <Swiper 
       // modules={[Controller]} 
       // onSwiper={setControlledSwiper} 
+      // spaceBetween={10}
       speed={800} 
-      slidesPerView={8} 
+      slidesPerView={4} 
       loop className="project__menu">
-        {Array.from(data.menu).map((el, index) => {
+        {Array.from(data.sliders).map((el, index) => {
           return (
-            <SwiperSlide key={`slide-${index}`} className="project__menu__item">
-              {el.img}
+            <SwiperSlide key={`slide-${index}`} className="project__menu__item" style={{backgroundImage: `url(${el.miniature})`}}>
+              {/* {el.miniature} */}
             </SwiperSlide>
           );
         })}

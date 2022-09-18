@@ -6,6 +6,9 @@
   padding: 6rem 0;
   &__desc {
       padding-bottom: 2rem;
+      > p {
+        color: $bgColorThird;
+      }
     }
     &__btns {
       @media (min-width: $newsBreakPointSmall) {
@@ -15,7 +18,16 @@
       margin: 1rem;
       padding: 2rem;
       border-radius: 0.7rem;
+      color: $mainFontColorSecondary;
+      background-color: $bgColorThird;
       box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+      > a {
+        padding-top: 0.2rem;
+        color: rgb(212, 211, 211);
+        &:hover {
+          color: $mainFontColorSecondary;
+        }
+      }
       > svg {
         font-size: 1.2rem;
       }

@@ -13,7 +13,7 @@ const Button = ({ data }) => {
       
       <div className="button__short-title">
         {shortTitle ? shortTitle : ""}
-        {data.icon}
+        {icon? icon : ""}
       </div>
       <div className="button__long-title">{longTitle}</div>
       <a

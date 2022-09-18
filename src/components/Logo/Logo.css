@@ -1,4 +1,7 @@
 .logo {
   display: flex;
   flex-direction: column;
+}
+.logo > p {
+  color: rgb(106, 89, 255);
 }/*# sourceMappingURL=Logo.css.map */

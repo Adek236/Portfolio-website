@@ -4,7 +4,8 @@ import ChatIcon from "@mui/icons-material/Chat";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 // images
-import project3 from "../assets/images/project1c_1000.png"
+import project3 from "../assets/images/project1/project1a_1000.png";
+import project3m from "../assets/images/project1/project1_miniature.png";
 
 const data = {
   en: {
@@ -43,60 +44,66 @@ const data = {
       {
         shortTitle: "",
         longTitle: "Let's Talk",
-        link: "/",
+        link: "#contact",
         icon: <ChatIcon />,
       },
     ],
     projects: {
-      title: "Portfolio",
+      title: "Projects",
+      buttons: [
+        {
+          shortTitle: "Live",
+          longTitle: "Live",
+          icon: null
+        },
+        {
+          shortTitle: "GitHub",
+          longTitle: "GitHub",
+          icon: null
+        },
+      ],
       sliders: [
         {
           id: 0,
           img: project3,
-          title: "Website react",
+          miniature: project3m, 
+          title: "Website react project app",
           types: ["JavaScript", "Css"],
-          desc: "ddsddddd",
+          desc: "obstacle run. Organic landscapes with curves, bends and hills set these environments apart from the previous title. I've designed well over 150 level segments for this game, while making sure every single one of them had a unique catch and feel. I was closesly involved in the design and development of obstacles.",
+          liveLink: "/link",
+          gitHubLink: "/link",
         },
         {
           id: 1,
           img: "/link",
+          miniature: "/link", 
           title: "Title-1",
           types: ["React", "Scss", "JS"],
           desc: "Desc b",
+          liveLink: "/link",
+          gitHubLink: "/link",
         },
         {
           id: 2,
           img: "/link",
+          miniature: "/link", 
           title: "Title-2",
           types: ["React", "Scss", "Socket.io"],
           desc: "Desc c",
+          liveLink: "/link",
+          gitHubLink: "/link",
         },
         {
           id: 3,
           img: "/link",
+          miniature: "/link", 
           title: "Title-3",
           types: ["React", "Scss"],
           desc: "Desc d",
+          liveLink: "/link",
+          gitHubLink: "/link",
         },
-      ],
-      menu: [
-        {
-          id: 0,
-          img: "/link0",
-        },
-        {
-          id: 1,
-          img: "/link1",
-        },
-        {
-          id: 2,
-          img: "/link2",
-        },
-        {
-          id: 3,
-          img: "/link3",
-        },
-      ],
+      ]
     },
     about: {
       img: "/image",
