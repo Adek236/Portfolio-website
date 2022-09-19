@@ -146,7 +146,7 @@ const data = {
             },
             {
               name: "Firebase",
-              rating: 0.5,
+              rating: 1,
             },
           ],
         },
@@ -207,12 +207,12 @@ const data = {
               rating: 1.5,
             },
             {
-              name: "Discord",
-              rating: 4,
-            },
-            {
               name: "Chrome Dev Tools",
               rating: 2.5,
+            },
+            {
+              name: "Discord",
+              rating: 4,
             },
             {
               name: "Windows",

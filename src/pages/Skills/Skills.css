@@ -1,6 +1,7 @@
 .skills {
   flex-grow: 1;
   min-height: 25rem;
+  height: 41rem;
   width: 80%;
   margin: 0 auto;
   flex-direction: column;
@@ -56,12 +57,34 @@
   align-items: center;
   justify-content: space-between;
   font-size: 1.5rem;
+  line-height: 2rem;
   flex-grow: 1;
   margin: 0.3rem auto;
   width: 80%;
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   background-color: rgb(61, 66, 92);
+}
+.skills__wrapper__categories__el__switch {
+  display: flex;
+  align-items: center;
+  height: 1em;
+  min-width: 2em;
+  border-radius: 1rem;
+  padding-inline: 0.2rem;
+  background-color: hsl(230deg, 20%, 50%);
+}
+.skills__wrapper__categories__el__switch > * svg {
+  color: hsl(0deg, 0%, 85%);
+}
+.skills__wrapper__categories__el__switch:hover {
+  cursor: pointer;
+}
+.skills__wrapper__categories__el__switch[data-isOn=true] {
+  justify-content: flex-end;
+}
+.skills__wrapper__categories__el__switch[data-isOn=true] > * svg {
+  color: rgb(255, 255, 255);
 }
 .skills__wrapper__items {
   display: flex;
@@ -99,4 +122,8 @@
   padding: 0.5rem;
   color: rgb(255, 255, 255);
   border: 1px solid rgb(106, 89, 255);
+}
+.skills__wrapper__items__el > svg {
+  color: yellow;
+  font-size: 0.6rem;
 }/*# sourceMappingURL=Skills.css.map */
