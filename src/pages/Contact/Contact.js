@@ -15,13 +15,13 @@ const Contact = ({ data }) => {
           <FontAwesomeIcon icon={faPaperPlane} />
           <h3>Email</h3>
           <p>{data.email}</p>
-          <a href="/">{data.p}</a>
+          <a href={`mailto:${data.email}`}>{data.p}</a>
         </div>
         <div className="contact__btns__box flex-center-col">
           <FontAwesomeIcon icon={faFacebookMessenger} />
           <h3>Messenger</h3>
           <p>{data.messenger}</p>
-          <a href="/">{data.p}</a>
+          <a href="https://m.me/adrian.zawadzki.12327">{data.p}</a>
         </div>
       </div>
     </section>

@@ -29,17 +29,20 @@ const Skills = ({ data }) => {
 
   return (
     <motion.section
-    // animate={{ height: "auto" }}
-    // transition={{ duration: 2 }}
-    id="skills" className="skills flex-center">
+      // animate={{ height: "auto" }}
+      // transition={{ duration: 2 }}
+      id="skills"
+      className="skills flex-center"
+    >
       <h2 className="skills-top">{data.title}</h2>
       <div className="skills__wrapper">
         <div className="skills__wrapper__categories">
           {Array.from(data.buttons).map((el, i) => {
             return (
-              <div key={`el-${i}`} tabIndex="1" className="skills__wrapper__categories__el">
+              <div key={`el-${i}`} className="skills__wrapper__categories__el">
                 {el.name}
                 <div
+                  tabIndex="0"
                   className="skills__wrapper__categories__el__switch"
                   data-ison={isOn === i ? true : false}
                   onClick={() => {

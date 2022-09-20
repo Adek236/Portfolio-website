@@ -4,8 +4,21 @@ import ChatIcon from "@mui/icons-material/Chat";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 // images
-import project3 from "../assets/images/project1/project1a_1000.png";
+import project1a_1000 from "../assets/images/project1/project1a_1000.png";
+import project1b_1000 from "../assets/images/project1/project1b_1000.png";
+import project1c_1000 from "../assets/images/project1/project1c_1000.png";
 import project3m from "../assets/images/project1/project1_miniature.png";
+import project2a_1200 from "../assets/images/project2/project2a_1200.png";
+import project2b_1200 from "../assets/images/project2/project2b_1200.png";
+import project2c_1200 from "../assets/images/project2/project2c_1200.png";
+import project2d_1200 from "../assets/images/project2/project2d_1200.png";
+import project2a_600 from "../assets/images/project2/project2a_600.png";
+import project2b_600 from "../assets/images/project2/project2b_600.png";
+import project2c_600 from "../assets/images/project2/project2c_600.png";
+import project2d_600 from "../assets/images/project2/project2d_600.png";
+
+// components
+import ImageSlider from "../pages/Projects/SlideContent/Contents/ImageSlider/ImageSlider";
 
 const data = {
   en: {
@@ -38,7 +51,7 @@ const data = {
       {
         shortTitle: "CV",
         longTitle: "Download CV",
-        link: "/",
+        link: project3m,
         icon: <FileDownloadIcon />,
       },
       {
@@ -54,56 +67,75 @@ const data = {
         {
           shortTitle: "Live",
           longTitle: "Live",
-          icon: null
+          icon: null,
         },
         {
           shortTitle: "GitHub",
           longTitle: "GitHub",
-          icon: null
+          icon: null,
         },
       ],
       sliders: [
         {
           id: 0,
-          img: project3,
-          miniature: project3m, 
+          miniature: project3m,
           title: "Website react project app",
           types: ["JavaScript", "Css"],
           desc: "obstacle run. Organic landscapes with curves, bends and hills set these environments apart from the previous title. I've designed well over 150 level segments for this game, while making sure every single one of them had a unique catch and feel. I was closesly involved in the design and development of obstacles.",
           liveLink: "/link",
           gitHubLink: "/link",
+          slideComponent: (
+            <ImageSlider
+              data={[project1a_1000, project1b_1000, project1c_1000]}
+            />
+          ),
         },
         {
           id: 1,
-          img: "/link",
-          miniature: "/link", 
+          miniature: "/link",
           title: "Title-1",
           types: ["React", "Scss", "JS"],
           desc: "Desc b",
           liveLink: "/link",
           gitHubLink: "/link",
+          slideComponent: (
+            <ImageSlider
+              data={[
+                project2a_1200,
+                project2b_1200,
+                project2c_1200,
+                project2d_1200,
+              ]}
+              data600={[
+                project2a_600,
+                project2b_600,
+                project2c_600,
+                project2d_600,
+              ]}
+            />
+          ),
         },
         {
           id: 2,
-          img: "/link",
-          miniature: "/link", 
+          miniature: "/link",
           title: "Title-2",
           types: ["React", "Scss", "Socket.io"],
           desc: "Desc c",
           liveLink: "/link",
           gitHubLink: "/link",
+          slideComponent: null,
         },
         {
           id: 3,
-          img: "/link",
-          miniature: "/link", 
+          miniature: "/link",
           title: "Title-3",
           types: ["React", "Scss"],
           desc: "Desc d",
           liveLink: "/link",
           gitHubLink: "/link",
+          slideComponent: null,
         },
-      ]
+      ],
     },
     about: {
       img: "/image",
@@ -160,11 +192,11 @@ const data = {
             },
             {
               name: "HTML(5)",
-              rating: 2.5,
+              rating: 3,
             },
             {
               name: "Css(3)",
-              rating: 2.5,
+              rating: 3,
             },
             {
               name: "SQL",

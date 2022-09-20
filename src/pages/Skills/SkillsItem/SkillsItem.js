@@ -28,7 +28,7 @@ const SkillsItem = ({ el }) => {
     <motion.li variants={skillsItemVariants} className="skills__wrapper__items__el flex-center">
       {el.name}
       {[...Array(Math.floor(el.rating))].map((_,i)=>{
-          return <StarIcon/>
+          return <StarIcon key={`star-${i}`}/>
       })}
       {isHalfStar? <StarHalfIcon/>:""}
     </motion.li>
