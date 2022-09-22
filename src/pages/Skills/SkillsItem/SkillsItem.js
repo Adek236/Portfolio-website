@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
-import { useEffect, useState } from "react";
 
 const skillsItemVariants = {
     open: {

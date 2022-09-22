@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./Projects.css";
 // import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";

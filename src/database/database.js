@@ -16,9 +16,16 @@ import project2a_600 from "../assets/images/project2/project2a_600.png";
 import project2b_600 from "../assets/images/project2/project2b_600.png";
 import project2c_600 from "../assets/images/project2/project2c_600.png";
 import project2d_600 from "../assets/images/project2/project2d_600.png";
+import project3a_1200 from "../assets/images/project3/project3a_1200.png";
+import project3b_1200 from "../assets/images/project3/project3b_1200.png";
+import project3c_1200 from "../assets/images/project3/project3c_1200.png";
+import project3a_600 from "../assets/images/project3/project3a_600.png";
+import project3b_600 from "../assets/images/project3/project3b_600.png";
+import project3c_600 from "../assets/images/project3/project3c_600.png";
 
 // components
 import ImageSlider from "../pages/Projects/SlideContent/Contents/ImageSlider/ImageSlider";
+import FlappyBird from "../pages/Projects/SlideContent/Contents/FlappyBird/FlappyBird";
 
 const data = {
   en: {
@@ -123,7 +130,12 @@ const data = {
           desc: "Desc c",
           liveLink: "/link",
           gitHubLink: "/link",
-          slideComponent: null,
+          slideComponent: (
+            <ImageSlider
+              data={[project3a_1200, project3b_1200, project3c_1200]}
+              data600={[project3a_600, project3b_600, project3c_600]}
+            />
+          ),
         },
         {
           id: 3,
@@ -133,7 +145,7 @@ const data = {
           desc: "Desc d",
           liveLink: "/link",
           gitHubLink: "/link",
-          slideComponent: null,
+          slideComponent: <FlappyBird />,
         },
       ],
     },
