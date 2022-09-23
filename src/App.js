@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import data from "../src/database/database";
-import { useCycle } from "framer-motion";
+import { useCycle, useInView } from "framer-motion";
 
 //components
 import Layout from "./components/Layout/Layout";
@@ -19,23 +19,33 @@ import Contact from "./pages/Contact/Contact";
 
 function App() {
   const [lang, toggleLang] = useCycle("en", "pl");
-  const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('isDarkMode') === 'true');
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem("isDarkMode") === "true"
+  );
+  const headerRef = useRef(null);
+  const headerIsInView = useInView(headerRef);
 
-    useEffect(()=>{
-      localStorage.setItem('isDarkMode', isDarkMode);
-    },[isDarkMode])
+  useEffect(() => {
+    localStorage.setItem("isDarkMode", isDarkMode);
+  }, [isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(prev => !prev);
+    setIsDarkMode((prev) => !prev);
   };
 
   return (
     <Layout isDarkMode={isDarkMode}>
-      {/* <Modal isModalOpen={isModalOpen}/> */}
-      <Header>
-        <Logo data={data[lang].logo} />
-        <Button data={data[lang].buttons[0]} download={true} />
-        <Button data={data[lang].buttons[1]} />
+      <Header headerRef={headerRef}>
+        <Logo data={data[lang].logo} headerIsInView={headerIsInView} />
+        <Button
+          data={data[lang].buttons[0]}
+          download={true}
+          animation={{ name: "slideDown", headerIsInView: headerIsInView, isAnim: true }}
+        />
+        <Button
+          data={data[lang].buttons[1]}
+          animation={{ name: "slideDown", headerIsInView: headerIsInView, isAnim: true }}
+        />
         <Navigation
           data={data[lang].navigation}
           lang={lang}

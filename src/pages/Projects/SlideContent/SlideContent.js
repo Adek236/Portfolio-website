@@ -24,6 +24,7 @@ const SlideContent = ({ data }) => {
               longTitle: data.buttons[0].longTitle,
               link: data.liveLink,
             }}
+            animation={{ isInView: true, isAnim: false}}
           />
           <Button
             data={{
@@ -31,6 +32,7 @@ const SlideContent = ({ data }) => {
               longTitle: data.buttons[1].longTitle,
               link: data.gitHubLink,
             }}
+            animation={{ isInView: true, isAnim: false}}
           />
         </div>
       </div>

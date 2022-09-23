@@ -1,13 +1,42 @@
-import React from "react";
+import { useEffect } from "react";
 import "./Button.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
-const Button = ({ data, download }) => {
+const Button = ({ data, download, animation }) => {
   const { shortTitle, longTitle, link, icon } = data;
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (animation?.headerIsInView) {
+      controls.start("visible");
+    }
+    if (!animation?.headerIsInView) {
+      controls.start("hidden");
+    }
+  });
+
+  const variants = {
+    slideDown: {
+      hidden: { translateY: "-200px" },
+      visible: {
+        translateY: 0,
+        transition: {
+          type: "spring",
+          stiffness: 400,
+          damping: 25,
+          duration: 0.5,
+        },
+      },
+    },
+  };
+
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      initial={animation.isAnim ? "hidden" : "visible"}
+      animate={controls}
+      variants={variants[animation.name]}
       className="button"
     >
       <div className="button__short-title">

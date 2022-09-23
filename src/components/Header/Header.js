@@ -1,9 +1,8 @@
 import "./Header.css";
 
-
-const Header = ({ children }) => {
+const Header = ({ children, headerRef }) => {
   return (
-    <header className="header">
+    <header ref={headerRef} className="header">
         { children }
     </header>
   )

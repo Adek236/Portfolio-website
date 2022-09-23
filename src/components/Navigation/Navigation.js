@@ -1,5 +1,4 @@
 import { motion, useCycle } from "framer-motion";
-import { useState } from "react";
 import "./Navigation.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -41,7 +40,13 @@ const menuVariants = {
 const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
   const [isModalOpen, toggleModal] = useCycle(false, true);
   return (
-    <nav className="navigation" aria-label="Primary">
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="navigation"
+      aria-label="Primary"
+    >
       <motion.div
         variants={variants}
         initial="closed"
@@ -86,7 +91,7 @@ const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
           );
         })}
       </motion.ul>
-    </nav>
+    </motion.nav>
   );
 };
 
