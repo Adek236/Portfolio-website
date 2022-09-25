@@ -9,6 +9,10 @@
 .contact__desc > p {
   color: rgb(106, 89, 255);
 }
+.contact__btns {
+  width: 100%;
+  overflow: hidden;
+}
 @media (min-width: 615px) {
   .contact__btns {
     flex-direction: row;

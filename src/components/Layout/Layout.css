@@ -28,10 +28,12 @@ html {
 
 .background-color-light {
   background-color: rgb(255, 255, 255);
+  transition: all 0.5s;
 }
 
 .background-color-dark {
   background-color: rgba(0, 0, 0, 0.938);
+  transition: all 0.5s;
 }
 
 .font-color-light {

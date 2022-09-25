@@ -31,9 +31,11 @@ html {
 
 .background-color-light {
   background-color: $bgColorPriority;
+  transition: all 0.5s;
 }
 .background-color-dark {
   background-color: $bgColorPriorityDark;
+  transition: all 0.5s;
 }
 
 .font-color-light {

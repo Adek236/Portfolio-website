@@ -11,6 +11,8 @@
       }
     }
     &__btns {
+      width: 100%;
+      overflow: hidden;
       @media (min-width: $newsBreakPointSmall) {
         flex-direction: row;
       }

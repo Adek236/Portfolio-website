@@ -1,10 +1,11 @@
 // import { useState } from "react";
 import "./Projects.css";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation,
-  //  Controller  
-  } from "swiper";
+import {
+  Navigation,
+  //  Controller
+} from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,12 +16,18 @@ const Projects = ({ data }) => {
   // const [controlledSwiper, setControlledSwiper] = useState(null);
   const buttons = data.buttons;
   return (
-    <div id="projects" className="project">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      id="projects"
+      className="project"
+    >
       <h2>{data.title}</h2>
       <div className="project__slider">
         <Swiper
           modules={[
-            Navigation, 
+            Navigation,
             // Controller
           ]}
           // controller={{ control: controlledSwiper }}
@@ -43,22 +50,28 @@ const Projects = ({ data }) => {
           })}
         </Swiper>
       </div>
-      <Swiper 
-      // modules={[Controller]} 
-      // onSwiper={setControlledSwiper} 
-      // spaceBetween={10}
-      speed={800} 
-      slidesPerView={4} 
-      loop className="project__menu">
+      <Swiper
+        // modules={[Controller]}
+        // onSwiper={setControlledSwiper}
+        // spaceBetween={10}
+        speed={800}
+        slidesPerView={4}
+        loop
+        className="project__menu"
+      >
         {Array.from(data.sliders).map((el, index) => {
           return (
-            <SwiperSlide key={`slide-${index}`} className="project__menu__item" style={{backgroundImage: `url(${el.miniature})`}}>
+            <SwiperSlide
+              key={`slide-${index}`}
+              className="project__menu__item"
+              style={{ backgroundImage: `url(${el.miniature})` }}
+            >
               {/* {el.miniature} */}
             </SwiperSlide>
           );
         })}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 

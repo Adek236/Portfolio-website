@@ -17,9 +17,9 @@ const Button = ({ data, download, animation }) => {
 
   const variants = {
     slideDown: {
-      hidden: { translateY: "-200px" },
+      hidden: { y: -200 },
       visible: {
-        translateY: 0,
+        y: 0,
         transition: {
           type: "spring",
           stiffness: 400,
