@@ -17,9 +17,9 @@ const Projects = ({ data }) => {
   const buttons = data.buttons;
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
+      initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }} 
       id="projects"
       className="project"
     >

@@ -5,22 +5,12 @@
   height: 5rem;
   width: 100%;
   font-size: 0.7rem;
-  // @media (min-width: $newsBreakPointSmall) {
-  //   flex-direction: row;
-  //   padding: 0 10%;
-  // }
+  overflow: hidden;
   &__nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    opacity: 0;
-    transform: translateY(20%);
-    &.activeObs {
-      opacity: 1;
-      transform: translateY(0%);
-      transition: all 1s;
-    }
     &__copyright {
       text-align: center;
       text-transform: uppercase;
@@ -31,13 +21,6 @@
     flex-direction: column;
     width: 100%;
     padding: 1rem;
-    opacity: 0;
-    transform: translateY(20%);
-    &.activeObs {
-      opacity: 1;
-      transform: translateY(0%);
-      transition: all 1s;
-    }
     > * ul {
       display: flex;
       > li {

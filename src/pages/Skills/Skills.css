@@ -22,6 +22,7 @@
 }
 .skills > h2 {
   font-size: 3rem;
+  padding-top: 1rem;
 }
 @media (min-width: 900px) {
   .skills > h2 {

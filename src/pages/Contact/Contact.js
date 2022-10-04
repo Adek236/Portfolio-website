@@ -17,8 +17,8 @@ const Contact = ({ data }) => {
         type: "spring",
         stiffness: 400,
         damping: 30,
-        duration: 10,
-        delay: 0.5,
+        duration: 5,
+        delay: 0.7,
       },
     },
   };
@@ -35,7 +35,24 @@ const Contact = ({ data }) => {
         stiffness: 400,
         damping: 30,
         duration: 5,
-        delay: 0.5,
+        delay: 0.4,
+      },
+    },
+  };
+  const titleVariants = {
+    offscreen: {
+      y: 200,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 10,
+        delay: 0.3,
       },
     },
   };
@@ -43,13 +60,14 @@ const Contact = ({ data }) => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
+      viewport={{ once: true }}
       id="contact"
       className="contact flex-center-col"
     >
-      <div className="contact__desc flex-center-col">
+      <motion.div variants={titleVariants} className="contact__desc flex-center-col">
         <p>{data.prevTitle}</p>
         <h2>{data.title}</h2>
-      </div>
+      </motion.div>
       <div className="contact__btns flex-center-col">
         <motion.div
           variants={cardVariantsR}

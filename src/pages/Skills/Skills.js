@@ -27,10 +27,36 @@ const Skills = ({ data }) => {
     setIsDomClear(true);
   }, [idButton]);
 
+
+  const skillsVariantsx = {
+    offscreen: {
+      y: 200,
+      // opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      // opacity: 1,
+      transition: {
+        type: "spring",
+        // stiffness: 400,
+        // damping: 30,
+        bounce: 0.6,
+        duration: 1.5,
+        // delay: 0.3,
+      },
+    },
+  };
+
   return (
     <motion.section
-      // animate={{ height: "auto" }}
-      // transition={{ duration: 2 }}
+    initial="offscreen"
+      whileInView="onscreen"
+      variants={skillsVariantsx}
+      viewport={{ once: true }}
+    // initial={{ opacity: 0, x: 400 }}
+    // animate={{ opacity: 1, x: 0 }}
+    // transition={{ duration: 0.5 }} 
+
       id="skills"
       className="skills flex-center"
     >
