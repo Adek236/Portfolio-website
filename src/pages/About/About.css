@@ -6,6 +6,7 @@
   min-height: 45rem;
   width: 80%;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media (min-width: 900px) {
   .about {
@@ -87,7 +88,7 @@
 }
 @media (min-width: 900px) {
   .about__wrapper__desc > h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .about__wrapper__hobbies > h3 {

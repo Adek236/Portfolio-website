@@ -18,7 +18,7 @@ const Contact = ({ data }) => {
         stiffness: 400,
         damping: 30,
         duration: 5,
-        delay: 0.7,
+        delay: 0.9,
       },
     },
   };
@@ -35,7 +35,7 @@ const Contact = ({ data }) => {
         stiffness: 400,
         damping: 30,
         duration: 5,
-        delay: 0.4,
+        delay: 0.6,
       },
     },
   };
@@ -52,7 +52,7 @@ const Contact = ({ data }) => {
         stiffness: 400,
         damping: 30,
         duration: 10,
-        delay: 0.3,
+        delay: 0.5,
       },
     },
   };
