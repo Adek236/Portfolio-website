@@ -53,14 +53,25 @@ const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
         animate={isModalOpen ? "open" : "closed"}
         className="navigation__icons"
       >
-        <div onClick={() => toggleDarkMode()}>
+        <motion.div
+          whileHover={{ scale: 1.05, originX: 0 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          onClick={() => toggleDarkMode()}
+        >
           {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
-        </div>
-        <div className="navigation__icons__lang" onClick={() => toggleLang()}>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.05, originX: 0 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="navigation__icons__lang"
+          onClick={() => toggleLang()}
+        >
           <LanguageIcon />
           <div className="flex-center">{lang === "en" ? "PL" : "EN"}</div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.05, originX: 0 }}
+          transition={{ type: "spring", stiffness: 300 }}
           role="button"
           aria-label="Open modal"
           tabIndex="0"
@@ -77,7 +88,7 @@ const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
           // }}
         >
           <MenuIcon />
-        </div>
+        </motion.div>
       </motion.div>
       <motion.ul
         initial="closed"

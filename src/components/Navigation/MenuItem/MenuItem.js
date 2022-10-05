@@ -22,6 +22,8 @@ const menuItemVariants = {
 const MenuItem = ({data, toggleModal}) => {
   return (
     <motion.li
+      whileHover={{scale: 1.1, originX: 0}}
+      transition={{ type: "spring", stiffness: 300}}
       className="navigation__menu__el"
       variants={menuItemVariants}
       onClick={() => toggleModal()}

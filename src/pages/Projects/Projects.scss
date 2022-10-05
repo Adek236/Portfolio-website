@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 93vh;
+  height: 95vh;
   min-height: 44rem;
   overflow: hidden;
   > h2 {
@@ -14,7 +14,7 @@
     line-height: 3rem;
   }
   &__slider {
-    height: 80%;
+    height: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
