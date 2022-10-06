@@ -11,10 +11,8 @@
   color: rgb(255, 255, 255);
   padding: 0.5rem;
   border-radius: 1.2rem;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   background-color: rgb(106, 89, 255);
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 5px 0px rgba(106, 89, 255, 0.5);
 }
 .navigation__icons__lang > div,
 .navigation__icons__lang > svg {

@@ -43,7 +43,7 @@
     // overflow: hidden;
     @media (min-width: $newsBreakPointMedium) {
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       // display: flex;
     }
     &__box {
@@ -52,7 +52,8 @@
       height: 50%;
       background-color: $bgColorThird;
       border-radius: 0.4rem;
-      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 1px 5px 0px $bgColorThird;
       @media (min-width: $newsBreakPointMedium) {
         width: 80%;
         height: 20%;
@@ -62,10 +63,11 @@
         top: -7rem;
         right: 3rem;
         left: 2rem;
+        height: 15rem;
+        min-width: 12rem;
         background-color: white;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
         // width: 80%;
-        height: 15rem;
         transform: rotate(-20deg);
         
       }
