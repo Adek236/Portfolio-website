@@ -51,7 +51,6 @@
 }
 .navigation__icons > div:hover {
   cursor: pointer;
-  scale: 1.05;
 }
 .navigation__menu {
   position: absolute;

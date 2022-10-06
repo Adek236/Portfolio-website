@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { motion, useCycle } from "framer-motion";
 import "./Navigation.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+import CloseIcon from "@mui/icons-material/Close";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -39,6 +42,7 @@ const menuVariants = {
 
 const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
   const [isModalOpen, toggleModal] = useCycle(false, true);
+  const [isMenuHover, setIsMenuHover] = useState();
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -53,28 +57,21 @@ const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
         animate={isModalOpen ? "open" : "closed"}
         className="navigation__icons"
       >
-        <motion.div
-          whileHover={{ scale: 1.05, originX: 0 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          onClick={() => toggleDarkMode()}
-        >
+        <motion.div 
+        whileHover={{color: `${isDarkMode ? "yellow": "black"}`}}
+        onClick={() => toggleDarkMode()}>
           {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
         </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05, originX: 0 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="navigation__icons__lang"
-          onClick={() => toggleLang()}
-        >
+        <div className="navigation__icons__lang" onClick={() => toggleLang()}>
           <LanguageIcon />
           <div className="flex-center">{lang === "en" ? "PL" : "EN"}</div>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05, originX: 0 }}
-          transition={{ type: "spring", stiffness: 300 }}
+        </div>
+        <div
           role="button"
           aria-label="Open modal"
           tabIndex="0"
+          onMouseEnter={()=> setIsMenuHover(true)}
+          onMouseLeave={()=> setIsMenuHover(false)}
           onClick={() => {
             toggleModal();
           }}
@@ -87,8 +84,8 @@ const NavBar = ({ data, toggleLang, lang, toggleDarkMode, isDarkMode }) => {
           //   }
           // }}
         >
-          <MenuIcon />
-        </motion.div>
+          {isModalOpen ? <CloseIcon /> : isMenuHover ? <MenuOpenIcon /> : <MenuIcon />}
+        </div>
       </motion.div>
       <motion.ul
         initial="closed"
