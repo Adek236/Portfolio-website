@@ -23,7 +23,7 @@
 }
 .project__slider__elements .swiper-button-prev,
 .project__slider__elements .swiper-button-next {
-  color: black;
+  color: rgb(106, 89, 255);
 }
 .project__slider__elements .swiper-button-prev::after,
 .project__slider__elements .swiper-button-next::after {

@@ -22,7 +22,7 @@
       overflow: hidden;
       .swiper-button-prev,
       .swiper-button-next {
-        color: black;
+        color: $bgColorThird;
         &::after{
           font-size: 1.5rem;
         }
