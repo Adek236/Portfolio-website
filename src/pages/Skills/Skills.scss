@@ -40,11 +40,8 @@
       display: flex;
       flex-grow: 1;
       flex-direction: column;
-      // height: 50%;
       padding: 0.5rem 0;
-      // border: 1px solid black;
       @media (min-width: $newsBreakPointMedium) {
-        // height: 100%;
         width: 50%;
       }
       &__el {
@@ -52,7 +49,6 @@
         align-items: center;
         justify-content: space-between;
         font-size: 1rem;
-        // line-height: 2rem;
         flex-grow: 1;
         margin: 0.3rem auto;
         width: 80%;
@@ -60,13 +56,9 @@
         text-transform: uppercase;
         border-radius: 0.5rem;
         background-color: rgb(61, 66, 92);
-        // @media (min-width: $newsBreakPointSmall) {
-        //   font-size: 1.5rem;
-        // }
           &__switch {
             display: flex;
             align-items: center;
-            // justify-content: flex-end;
             height: 1.5em;
             min-width: 3em;
             border-radius: 1rem;
@@ -95,7 +87,6 @@
       flex-wrap: wrap;
       height: 50%;
       padding: 2rem 0;
-      // border: 1px solid black;
       @media (min-width: $newsBreakPointMedium) {
         padding-top: 0;
         justify-content: flex-start;

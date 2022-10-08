@@ -299,8 +299,8 @@ const data = {
     contact: {
       prevTitle: "Get in Touch",
       title: "Contact me",
-      email: "dasdas@dsds.pl",
-      messenger: "@adrianzawa",
+      email: "adek236@gmail.com",
+      messenger: "adrian.zawadzki.12327",
       p: "Send a message",
     },
   },
